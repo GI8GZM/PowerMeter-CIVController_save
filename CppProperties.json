@@ -6,12 +6,10 @@
       "includePath": [
         "${projectRoot}..\\PowerMeter-CIVController",
         "C:\\Program Files (x86)\\Arduino\\hardware\\teensy\\avr\\libraries\\XPT2046_Touchscreen",
-        "C:\\Program Files (x86)\\Arduino\\hardware\\teensy\\avr\\libraries\\SPI",
         "C:\\Program Files (x86)\\Arduino\\hardware\\teensy\\avr\\libraries\\ILI9341_t3",
         "C:\\Program Files (x86)\\Arduino\\hardware\\teensy\\avr\\libraries\\EEPROM",
         "C:\\Program Files (x86)\\Arduino\\hardware\\teensy\\avr\\libraries\\ADC",
         "C:\\Program Files (x86)\\Arduino\\hardware\\teensy\\avr\\libraries\\Metro",
-        "${projectRoot}..\\..\\libraries\\ILI9341_fonts",
         "C:\\Program Files (x86)\\Arduino\\hardware\\teensy\\avr\\cores\\teensy4",
         "C:\\Program Files (x86)\\Arduino\\hardware\\teensy\\avr\\cores\\teensy4\\avr",
         "C:\\Program Files (x86)\\Arduino\\hardware\\teensy\\avr\\cores\\teensy4\\debug",

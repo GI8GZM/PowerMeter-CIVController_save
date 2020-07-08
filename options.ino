@@ -33,23 +33,16 @@ void setAvgSamples()
 
 	// screen header, centred
 	tft.setFont(FONT12);
-	char txt[] = "Averaging Options (1-100%)";
+	char txt[] = "Averaging Options: Fast - Slow (1-100%)";
 	tft.setCursor((320 - tft.strPixelLen(txt)) / 2, 1);
 	tft.printf(txt);
 
-	// touch area index
+	// touch area indexing
 	int tIndex = 0;
-	drawPlusMinusOpts(samplesCalOpt, "Calibrate Sampling", tIndex);			// returns new i
-	tIndex += 2;
-
-	drawPlusMinusOpts(samplesDefOpt, "Default Sampling", tIndex);		// returns new i
-	tIndex += 2;
-
-	drawPlusMinusOpts(samplesAltOpt, "Aternate Sampling", tIndex);
-	tIndex += 2;
-
-	drawPlusMinusOpts(weighting, "Decay Weight (.001-1.0)", tIndex);
-	tIndex += 2;
+	tIndex = drawPlusMinusOpts(samplesCalOpt, "Calibrate Sampling", tIndex);
+	tIndex = drawPlusMinusOpts(samplesDefOpt, "Default Sampling", tIndex);	
+	tIndex = drawPlusMinusOpts(samplesAltOpt, "Alternate Sampling", tIndex);
+	tIndex = drawPlusMinusOpts(weighting, "Decay Weight (0.001-1.0)", tIndex);
 
 	x = 135; y = 210;
 	drawTextBoxOpts(x, y, "Exit", tIndex);
@@ -157,7 +150,7 @@ void setAvgSamples()
 	draw text and value, +/- buttons
 	returns touch index = original i+2
 */
-void drawPlusMinusOpts(int posn, const char* txt, int tIndex)
+int drawPlusMinusOpts(int posn, const char* txt, int tIndex)
 {
 	int x = 20, y;
 	int offSet = 10;
@@ -195,6 +188,10 @@ void drawPlusMinusOpts(int posn, const char* txt, int tIndex)
 	y += offSet;
 	tb[tIndex].x = x;
 	tb[tIndex].y = y;
+	tIndex++;
+
+	// return new touch index
+	return tIndex;
 }
 
 
