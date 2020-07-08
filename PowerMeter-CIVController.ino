@@ -8,7 +8,7 @@ Swr/PowerMeter + IC7300 C-IV Controller - https://github.com/GI8GZM/PowerMeter-C
 No publication without acknowledgement to author
 -------------------------------------------------------------------------------------*/
 /*
-	Teensy 3.2
+	Teensy 3.2 / 4.0 
 	ILI9341 TFT liquid crystal display, 240x320 dots, RGB colour.
 	XPT2046 Touch screen,   Needs mapped to match TFT display
 
